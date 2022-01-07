@@ -136,7 +136,7 @@ $("#modalDueDate").datepicker({
 var auditTask = function(taskEl) {
   var date = $(taskEl).find("span").text().trim();
   var time = moment(date, "L").set("hour", 17);
-  $(taskEl).removeClass("list-grou-item-warning list-group-item-danger");
+  $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
   if (moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger");
   } else if (Math.abs(moment().diff(time, "days")) <= 2) {
